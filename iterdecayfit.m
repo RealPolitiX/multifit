@@ -1,5 +1,6 @@
 function [fitres, gof, output] = iterdecayfit(fitFunc, traceX, traceY, startVal, lowBound, maxrun, convergenceThreshold)
     % [fitres, gof] = iterdecayfit(fitFunc, traceX, traceY, startVal, maxrun, convergenceThreshold)
+    % Iterative fitting routine
     
     % Initialize the R^2 (rsq) values to 0
     % rsq = r-squared parameter of the current run
@@ -19,11 +20,11 @@ function [fitres, gof, output] = iterdecayfit(fitFunc, traceX, traceY, startVal,
         rsq0 = rsq;
         %fitres0 = fitres;
         if rsq == 0 % First run
-            [fitres, gof, output] = multisinefit(traceX, traceY, fitFunc, startVal, lowBound);
+            [fitres, gof, output] = multioscfit(traceX, traceY, fitFunc, startVal, lowBound);
         elseif rsq <= rsq0 && nrun > 1 % When the fitting gets worse
-            [fitres, gof, output] = multisinefit(traceX, traceY, fitFunc, fitvals(nrun-1,:), lowBound);
+            [fitres, gof, output] = multioscfit(traceX, traceY, fitFunc, fitvals(nrun-1,:), lowBound);
         elseif rsq > rsq0 % When the fitting gets better
-            [fitres, gof, output] = multisinefit(traceX, traceY, fitFunc, fitvals(nrun,:), lowBound);
+            [fitres, gof, output] = multioscfit(traceX, traceY, fitFunc, fitvals(nrun,:), lowBound);
         end
         
         nrun = nrun + 1;
