@@ -26,6 +26,4 @@ Global fitting of multi-exponential decay relaxation dynamics with a Gaussian im
 
 Fitting to a model of the type,
 
-```
-![alt text](https://github.com/RealPolitiX/multifit/blob/master/accessories/eq_globalfit.gif "GlobalFit")
-```
+![Alt text](https://github.com/RealPolitiX/multifit/blob/master/accessories/eq_globalfit.gif "GlobalFit")
