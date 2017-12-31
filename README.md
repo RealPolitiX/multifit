@@ -1,5 +1,5 @@
 # multifit
-The repo consists of two sets of Matlab routines for fitting transient absorption data:
+The repo consists of two sets of Matlab routines for fitting transient absorption data.
 
 
 ### **multioscfit**
@@ -26,4 +26,7 @@ Global fitting of multi-exponential decay relaxation dynamics with a Gaussian im
 
 Fitting to a model of the type,
 
-$$S(\{A_i (\lambda), \tau_i, z_i\}_{i=1}^N, \sigma, t_0: t) = \exp{\left[-\frac{(t-t_0)^2}{2\sigma^2}\right]} \otimes \sum_{i=1}^N A_i (\lambda) \exp\left[ -(t - t_{0})/\tau_i \right] + z_i$$
+```
+![alt text](../accessories/eq_globalfit.gif "GlobalFit")
+```
+
