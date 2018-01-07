@@ -9,7 +9,7 @@ Iterative fitting of a single free induction decay time trace into a sum of expo
 
 Fitting to a model of the type,
 
-![Alt text](https://github.com/RealPolitiX/multifit/blob/master/accessories/eq_globalfit.gif "Multioscfit")
+![Alt text](https://github.com/RealPolitiX/multifit/blob/master/accessories/eq_multioscfit.gif "Multioscfit")
 
 The background removal (multi-exponential decay type) may be carried out using the global fitting approach (see following section).
 
