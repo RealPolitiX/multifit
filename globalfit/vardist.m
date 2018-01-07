@@ -1,8 +1,8 @@
 function varargout = vardist(vararray, veclen, nvectorvar, nscalarvar)
-
-    % varargout = vardist(vararray, veclen, nvectorvar, nscalarvar)
-    % Reshape 2D array and distribute the values to a list of variables of
-    % either vectorial or scalar types.
+    
+    % VARDIST reshapes a 2D array and distribute the values to a list of
+    % variables of either vectorial or scalar types.
+    % varargout = VARDIST(vararray, veclen, nvectorvar, nscalarvar)
     %
     % Parameters:
     % vararray -- 2D array of variable values
@@ -11,6 +11,7 @@ function varargout = vardist(vararray, veclen, nvectorvar, nscalarvar)
     % nvectorvar -- number of vectorial variables
     % nscalarvar -- number of scalar varibales
     %
+    % Returns:
     % The function outputs a total of nvectorvar + nscalarvar numbers of
     % parameters depending on the specified numbers
     
