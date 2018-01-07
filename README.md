@@ -9,13 +9,11 @@ Iterative fitting of a single free induction decay time trace into a sum of expo
 
 Fitting to a model of the type,
 
-$$S(\{A_i, \tau_i, \nu_i, \phi_i\}_{i=1}^N, t_0: t) = \sum_{i=1}^{N}A_i \exp({-t/\tau_i}) \sin[\nu_i (t - t_0) + \phi_i]$$
-
-or $$\sum_{i=1}^{N}A_i \exp({-t/\tau_i}) \cos[\nu_i (t - t_0) + \phi_i]$$ ($$N$$ = 1, 2, ...).
-
-
+![Alt text](https://github.com/RealPolitiX/multifit/blob/master/accessories/eq_globalfit.gif "Multioscfit")
 
 The background removal (multi-exponential decay type) may be carried out using the global fitting approach (see following section).
+
+
 
 
 
@@ -30,11 +28,13 @@ Fitting to a model of the type,
 
 ![Alt text](https://github.com/RealPolitiX/multifit/blob/master/accessories/eq_globalfit.gif "GlobalFit")
 
-Operation steps:
+__Operation steps__:
 
 1. __Construct fitting model__ (e.g. DecayModel or use a model constructor like [`constructExpDecayModel`](https://github.com/RealPolitiX/multifit/blob/master/globalfit/generic_framework/constructExpDecayModel.m)).
 
-2. __Single-trace fitting__ to provide feasible (can be carried out using Matlab's [cftool](https://de.mathworks.com/help/curvefit/curvefitting-app.html) interactive interface).
+2. __Single-trace fitting__ to provide feasible initial guesses for the fitting parameters (esp. time constants).
+
+   Tool to use: Matlab's [cftool](https://de.mathworks.com/help/curvefit/curvefitting-app.html) interactive interface
 
 3. __Construct initial guesses and (upper and/or lower) bounds__, if necessary, for every fitting parameter.
 
@@ -50,7 +50,7 @@ Operation steps:
 
 6. __Calculate the 95% confidence intervals (CIs)__ for all fitting parameters.
 
-   function to use: [`nlparci`](https://www.mathworks.com/help/stats/nlparci.html) (need the Jacobian obtained from minimizers)
+   function to use: [`nlparci`](https://www.mathworks.com/help/stats/nlparci.html) (need the Jacobian obtained from the minimizer)
 
 7. __Distribute the fitted parameters and CIs__.
 
