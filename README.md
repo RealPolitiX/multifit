@@ -1,6 +1,8 @@
 # multifit
 The repo consists of two sets of Matlab routines for fitting transient absorption data.
 
+<br><br>
+
 
 ### **multioscfit**
 Iterative fitting of a single free induction decay time trace into a sum of exponential decay-modulated (co)sinusoids. The routine uses starting point re-initialization to find a close fit in a much faster and more reliable way than conventional single-starting approach.
@@ -13,9 +15,7 @@ Fitting to a model of the type,
 
 The background removal (multi-exponential decay type) may be carried out using the global fitting approach (see following section).
 
-
-
-
+<br><br>
 
 ### **globalfit**
 Global fitting of multi-exponential decay relaxation dynamics with a Gaussian impulse response.
@@ -50,7 +50,7 @@ __Operation steps__:
 
 6. __Calculate the 95% confidence intervals (CIs)__ for all fitting parameters.
 
-   function to use: [`nlparci`](https://www.mathworks.com/help/stats/nlparci.html) (need the Jacobian obtained from the minimizer)
+   function to use: [`nlparci`](https://www.mathworks.com/help/stats/nlparci.html) (need the Jacobian matrix obtained from the minimizer)
 
 7. __Distribute the fitted parameters and CIs__.
 

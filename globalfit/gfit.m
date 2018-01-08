@@ -50,7 +50,7 @@ d_fit = fitvals(idx(3)+3);
 m_fit = fitvals(idx(3)+4);
 
 % Construct fitting parameter dictionary
-varlib = dictConstructor({}, {'a1',a1_fit},{'a2',a2_fit},{'z',z_fit},...
+varlib = dictconstruct({}, {'a1',a1_fit},{'a2',a2_fit},{'z',z_fit},...
     {'c1',c1_fit},{'c2',c2_fit},{'d',d_fit},{'m',m_fit});
 
 fitdyn = DecayModel(fitvals, dtaxis);
@@ -87,7 +87,7 @@ c2_ci = ci(idx(3)+2,:);
 d_ci = ci(idx(3)+3,:);
 m_ci = ci(idx(3)+4,:);
 
-varlib = dictConstructor(varlib, {'a1_ci',a1_ci},{'a2_ci',a2_ci},{'z_ci',z_ci},...
+varlib = dictconstruct(varlib, {'a1_ci',a1_ci},{'a2_ci',a2_ci},{'z_ci',z_ci},...
     {'c1_ci',c1_ci},{'c2_ci',c2_ci},{'d_ci',d_ci},{'m_ci',m_ci});
 
 %%
